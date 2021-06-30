@@ -14,16 +14,16 @@ build/otherfile: source build/
 
 # Now try to build somefile again
 
-# You'll notice that it rebuilt it, but why is this? Delete the build directory and try again in debug
-#	`make clean`, `make build/somefile --debug`, `make build/otherfile --debug`, `make build/sometfile --debug`
+# You'll notice that it rebuilt it, but why is this?  Delete the build directory and try again in debug
+#	`make clean`, `make build/somefile --debug`, `make build/otherfile --debug`, `make build/somefile --debug`
 
-# You should notice the log message "Prerequist 'build/' is newer than target 'build/somefile'.  This happens because modifying
+# You should notice the log message "Prerequisite 'build/' is newer than target 'build/somefile'.  This happens because modifying
 #	a document in a directory updates the file's timestamp as well as the directories timestamp.  
 
-# To fix this problem, we need to tell Make that, for a given target, a prerequist must exist, 
+# To fix this problem, we need to tell Make that, for a given target, a prerequisite must exist, 
 # 	but not be "up to date".  To do this, we need some new syntax
 
-# Here, everything after the pipe is referred to as an 'order-only prerequist'.  We only care that these files exist
+# Here, everything after the pipe is referred to as an 'order-only prerequisite'.  We only care that these files exist
 build/somefile1: source | build/
 	@echo Making somefile1
 	@cat source > build/somefile1

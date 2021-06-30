@@ -1,4 +1,6 @@
-# Fundamentaly, Make is used to build files.  Non-file generating commands are refered to a PHONY targets
+# Fundamentaly, Make is used to build files.
+
+# Targets are generally responsible for generating a file of the same name.  Targets that do not are referred to as PHONY targets.
 
 # Run this target twice
 somefile:
@@ -14,9 +16,9 @@ otherfile: somefile
 	@date >> otherfile
 
 
-# Try running other file twice
+# Try running 'otherfile' twice
 
-# You should notice that you get the same  'otherfile' is up to date
+# You should notice that you get the message that 'otherfile' is up to date
 
 # Now delete 'somefile' and try to build again
 
