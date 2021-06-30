@@ -24,5 +24,5 @@ target3: target2
 .dependecy3:
 	@echo dep 3
 
-# target can call multiple other targets
-target4: .dependecy1 .dependecy2 .dependecy3 
+# target can call multiple other targets (Note: the order should not be relied upon, they may run in parallel)
+target4: .dependecy1 .dependecy2 .dependecy3
