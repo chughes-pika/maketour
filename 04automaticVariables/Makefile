@@ -16,7 +16,7 @@ build/file0: | build/
 WATCH_FILES = $(shell find src -type f) # We need to tell Make to execute this in a shell (uses default system shell)
 build/bigFile.bin: ${WATCH_FILES} | build/
 	@echo 'Compiling' the $(@F) in the $(@D) directory
-	@cat $? > $@
+	cat $? > $@
 # Here we see a few variables used
 #	$(@F) grabs only the file name of the target
 #	$(@D) grabs only the directory of the target
@@ -32,9 +32,9 @@ build/%.bin: src/%.src | build/
 	@cp $? $@
 	@echo "compiled" >> $@
 
-# The above target translates into
+# For 'file1', the above target translates into
 #	build/file1.bin: src/file1.src | build/
-#		@echo "'Compiling' $@"
+#		@echo "'Compiling' file with stem file1"
 #		@cp $? $@
 #		@echo "compiled" >> $@
 #
