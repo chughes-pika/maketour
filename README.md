@@ -15,4 +15,6 @@ Please enjoy this repo and feel free to create issues for anything
 you think should be updated!
 
 ## How to use this repo
-`cd` to the lesson of your choice and follow along with the comments in the Makefile
+`cd` to the lesson of your choice and follow along with the comments in the Makefile.
+I used `GNU Make 4.2.1` for this project.  Please make sure this is the version you
+used before creating issues for misbehaving lessons.
